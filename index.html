@@ -118,6 +118,58 @@
     border-top:1px dashed var(--line);
     padding-top:16px;
   }
+  .map-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    margin-top:20px;
+  }
+  .schematic-wrap{
+    margin-top:20px;
+    border-top:1px dashed var(--line);
+    padding-top:18px;
+  }
+  .schematic-title{
+    font-size:.82rem;
+    color:#6B6B6B;
+    margin-bottom:10px;
+  }
+  .schematic-wrap svg{
+    width:100%;
+    height:auto;
+    max-width:600px;
+    display:block;
+  }
+  @media (max-width:640px){.map-grid{grid-template-columns:1fr;}}
+  .map-card{
+    border:1px solid var(--line);
+    border-radius:4px;
+    overflow:hidden;
+    background:var(--paper);
+  }
+  .map-label{
+    padding:10px 14px;
+    font-size:.85rem;
+    font-weight:700;
+    color:var(--ink);
+    background:var(--paper-deep);
+    border-bottom:1px solid var(--line);
+  }
+  .map-card iframe{
+    width:100%;
+    height:220px;
+    border:none;
+    display:block;
+  }
+  .map-placeholder{
+    height:220px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#9A9A9A;
+    font-size:.85rem;
+    background:repeating-linear-gradient(45deg, var(--paper) 0 10px, var(--paper-deep) 10px 20px);
+  }
 
   /* ---------- PROGRAM LIST ---------- */
   .program{list-style:none;margin:0;padding:0;}
@@ -231,6 +283,33 @@
       </div>
       <div class="chart-note">
         研修会場と懇親会場はいずれも◯◯駅周辺の徒歩圏内です。研修会終了後は、そのまま徒歩で懇親会場（◯◯ホテル）へ移動いたします。
+      </div>
+      <div class="schematic-wrap">
+        <div class="schematic-title">周辺配置図（模式図・縮尺は正確ではありません）</div>
+        <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+          <rect x="90" y="0" width="81" height="42" fill="#EDE9DC"/>
+          <text x="104" y="26" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#14213D">◯◯駅</text>
+
+          <rect x="171" y="179" width="184" height="144" fill="#EDE9DC"/>
+          <text x="185" y="205" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#14213D">◯◯医療センター</text>
+
+          <rect x="407" y="179" width="130" height="43" fill="#CFEF3A"/>
+          <text x="418" y="205" font-family="Noto Sans JP, sans-serif" font-size="15" fill="#14213D">◯◯ホール</text>
+          <text x="418" y="222" font-family="Noto Sans JP, sans-serif" font-size="11" fill="#4A5568">（研修会場）</text>
+
+          <rect x="171" y="380" width="603" height="108" fill="#EDE9DC"/>
+          <text x="188" y="406" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#14213D">公園</text>
+        </svg>
+      </div>
+      <div class="map-grid">
+        <div class="map-card">
+          <div class="map-label">研修会場：◯◯医療センター</div>
+          <div class="map-placeholder">地図は本公開時に表示されます</div>
+        </div>
+        <div class="map-card">
+          <div class="map-label">懇親会場：◯◯ホテル</div>
+          <div class="map-placeholder">地図は本公開時に表示されます</div>
+        </div>
       </div>
     </div>
   </section>
