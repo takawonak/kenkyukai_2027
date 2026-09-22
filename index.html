@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>研究会のご案内｜参加登録</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14213D;
+    --sea:#1F6F78;
+    --sea-light:#5B9AA0;
+    --paper:#F5F3EC;
+    --paper-deep:#EDE9DC;
+    --gold:#B08D57;
+    --line:#D9D3C4;
+    --white:#FFFFFF;
+    --danger:#B4482F;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Noto Sans JP', sans-serif;
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Noto Serif JP', serif;
+    color:var(--ink);
+    margin:0 0 .4em;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:linear-gradient(180deg, var(--ink) 0%, #1c3358 100%);
+    color:var(--paper);
+    padding:72px 0 56px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    left:0;right:0;bottom:0;
+    height:6px;
+    background:repeating-linear-gradient(90deg, var(--gold) 0 10px, transparent 10px 20px);
+    opacity:.6;
+  }
+  .eyebrow{
+    font-size:.8rem;
+    letter-spacing:.28em;
+    color:var(--sea-light);
+    text-transform:uppercase;
+    margin-bottom:18px;
+  }
+  .hero h1{
+    color:var(--white);
+    font-size:clamp(2rem, 5vw, 3rem);
+    font-weight:700;
+    line-height:1.4;
+    max-width:14ch;
+  }
+  .hero p.lead{
+    color:#D9E4E6;
+    font-size:1.05rem;
+    max-width:46ch;
+    margin-top:18px;
+  }
+  .hero-meta{
+    margin-top:36px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:28px;
+  }
+  .hero-meta div{border-left:2px solid var(--gold);padding-left:14px;}
+  .hero-meta .k{font-size:.75rem;color:var(--sea-light);letter-spacing:.08em;}
+  .hero-meta .v{font-size:1.05rem;color:var(--white);font-weight:500;margin-top:2px;}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:56px 0;}
+  section + section{border-top:1px solid var(--line);}
+  .section-head{margin-bottom:28px;}
+  .section-head .tag{
+    font-size:.72rem;
+    letter-spacing:.24em;
+    color:var(--gold);
+    text-transform:uppercase;
+    font-weight:700;
+  }
+  .section-head h2{font-size:1.6rem;margin-top:8px;}
+
+  /* ---------- ROUTE / CHART SIGNATURE ---------- */
+  .chart{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:32px 28px 24px;
+  }
+  .chart svg{width:100%;height:auto;display:block;}
+  .chart-caption{
+    display:flex;
+    justify-content:space-between;
+    font-size:.85rem;
+    color:var(--sea);
+    margin-top:10px;
+    letter-spacing:.02em;
+  }
+  .chart-note{
+    margin-top:18px;
+    font-size:.92rem;
+    color:#4A5568;
+    border-top:1px dashed var(--line);
+    padding-top:16px;
+  }
+
+  /* ---------- PROGRAM LIST ---------- */
+  .program{list-style:none;margin:0;padding:0;}
+  .program li{
+    display:grid;
+    grid-template-columns:110px 1fr;
+    gap:20px;
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .program li:first-child{border-top:1px solid var(--line);}
+  .program time{
+    font-family:'Noto Serif JP', serif;
+    font-weight:600;
+    color:var(--sea);
+    font-size:1.05rem;
+  }
+  .program .what b{display:block;font-size:1.02rem;margin-bottom:2px;}
+  .program .what span{font-size:.9rem;color:#5A5A5A;}
+
+  /* ---------- INFO GRID ---------- */
+  .info-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+  }
+  @media (max-width:640px){.info-grid{grid-template-columns:1fr;}}
+  .info-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:22px 24px;
+  }
+  .info-card .k{
+    font-size:.75rem;
+    letter-spacing:.1em;
+    color:var(--gold);
+    text-transform:uppercase;
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .info-card .v{font-size:1rem;}
+  .info-card .v small{display:block;color:#6B6B6B;font-size:.85rem;margin-top:4px;}
+
+  footer{
+    padding:36px 0 56px;
+    text-align:center;
+    color:#8A8A8A;
+    font-size:.82rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Study Meeting Invitation</div>
+    <h1>研究会のご案内</h1>
+    <p class="lead">研修会を◯◯医療センター ◯◯ホールにて、懇親会を◯◯ホテルにて開催いたします。ご多用の折とは存じますが、皆さまのご参加を心よりお待ちしております。</p>
+    <div class="hero-meta">
+      <div>
+        <div class="k">日時</div>
+        <div class="v">2026年◯月◯日（◯）14:00〜20:00</div>
+      </div>
+      <div>
+        <div class="k">研修会 会場</div>
+        <div class="v">◯◯医療センター ◯◯ホール</div>
+      </div>
+      <div>
+        <div class="k">懇親会 会場</div>
+        <div class="v">◯◯ホテル</div>
+      </div>
+      <div>
+        <div class="k">研修会 定員</div>
+        <div class="v">60名（先着順）</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ACCESS -->
+  <section id="access">
+    <div class="section-head">
+      <div class="tag">Access</div>
+      <h2>アクセス</h2>
+    </div>
+    <div class="chart">
+      <svg viewBox="0 0 760 130" xmlns="http://www.w3.org/2000/svg">
+        <line x1="80" y1="65" x2="380" y2="65" stroke="#1F6F78" stroke-width="2" stroke-dasharray="6 8" stroke-linecap="round"/>
+        <line x1="380" y1="65" x2="680" y2="65" stroke="#B08D57" stroke-width="2" stroke-dasharray="6 8" stroke-linecap="round"/>
+
+        <circle cx="80" cy="65" r="8" fill="#14213D"/>
+        <circle cx="80" cy="65" r="14" fill="none" stroke="#14213D" stroke-width="1.5" opacity=".4"/>
+        <text x="80" y="32" text-anchor="middle" font-family="Noto Serif JP, serif" font-size="16" font-weight="600" fill="#14213D">◯◯駅</text>
+
+        <circle cx="380" cy="65" r="8" fill="#1F6F78"/>
+        <circle cx="380" cy="65" r="14" fill="none" stroke="#1F6F78" stroke-width="1.5" opacity=".4"/>
+        <text x="380" y="32" text-anchor="middle" font-family="Noto Serif JP, serif" font-size="15" font-weight="600" fill="#14213D">◯◯医療センター</text>
+        <text x="230" y="100" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="13" fill="#5A5A5A">徒歩 約3分</text>
+
+        <circle cx="680" cy="65" r="8" fill="#B08D57"/>
+        <circle cx="680" cy="65" r="14" fill="none" stroke="#B08D57" stroke-width="1.5" opacity=".4"/>
+        <text x="680" y="32" text-anchor="middle" font-family="Noto Serif JP, serif" font-size="15" font-weight="600" fill="#14213D">◯◯ホテル</text>
+        <text x="530" y="100" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="13" fill="#5A5A5A">徒歩 数分</text>
+      </svg>
+      <div class="chart-caption">
+        <span>研修会：◯◯駅から徒歩約3分</span>
+        <span>懇親会：◯◯駅前・駅から徒歩約1分</span>
+      </div>
+      <div class="chart-note">
+        研修会場と懇親会場はいずれも◯◯駅周辺の徒歩圏内です。研修会終了後は、そのまま徒歩で懇親会場（◯◯ホテル）へ移動いたします。
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM -->
+  <section id="program">
+    <div class="section-head">
+      <div class="tag">Program</div>
+      <h2>当日のプログラム</h2>
+    </div>
+    <ul class="program">
+      <li>
+        <time>13:30</time>
+        <div class="what"><b>受付開始</b><span>◯◯医療センター ◯◯ホール</span></div>
+      </li>
+      <li>
+        <time>14:00</time>
+        <div class="what"><b>研修会</b><span>講演・症例検討</span></div>
+      </li>
+      <li>
+        <time>17:30</time>
+        <div class="what"><b>移動</b><span>◯◯ホテルへ徒歩移動</span></div>
+      </li>
+      <li>
+        <time>18:00</time>
+        <div class="what"><b>懇親会</b><span>◯◯ホテルにて夕食を兼ねた懇親会</span></div>
+      </li>
+      <li>
+        <time>20:00</time>
+        <div class="what"><b>解散</b><span>◯◯駅より各方面へ</span></div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- INFO -->
+  <section id="info">
+    <div class="section-head">
+      <div class="tag">Details</div>
+      <h2>開催概要</h2>
+    </div>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="k">研修会 会場</div>
+        <div class="v">◯◯医療センター ◯◯ホール<small>住所は追ってご案内します</small></div>
+      </div>
+      <div class="info-card">
+        <div class="k">懇親会 会場</div>
+        <div class="v">◯◯ホテル<small>住所は追ってご案内します</small></div>
+      </div>
+      <div class="info-card">
+        <div class="k">懇親会 定員</div>
+        <div class="v">人数制限なし<small>研修会にご参加でない方もお申し込みいただけます</small></div>
+      </div>
+      <div class="info-card">
+        <div class="k">当日宿泊のあっせん</div>
+        <div class="v">◯◯ホテル<small>先着20名まで／定員に達し次第終了</small></div>
+      </div>
+      <div class="info-card">
+        <div class="k">参加費</div>
+        <div class="v">未定<small>詳細は追ってご連絡いたします</small></div>
+      </div>
+      <div class="info-card">
+        <div class="k">登録締切</div>
+        <div class="v">2026年◯月◯日（◯）<small>研修会は定員に達し次第、締め切らせていただきます</small></div>
+      </div>
+      <div class="info-card">
+        <div class="k">お問い合わせ</div>
+        <div class="v">事務局<small>担当者名・連絡先をここに記載</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION -->
+  <section id="register">
+    <div class="section-head">
+      <div class="tag">Registration</div>
+      <h2>参加登録</h2>
+    </div>
+    <div class="chart" style="padding:16px;">
+      <div style="display:flex;justify-content:center;">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdQYFBa6sW1BorWDaphOrbkiDgOYlR-YjRFop35RfTY1h6NtQ/viewform?embedded=true" width="640" height="1650" frameborder="0" marginheight="0" marginwidth="0" style="max-width:100%;border:none;">読み込んでいます…</iframe>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>参加登録は上記フォームより承っております。</footer>
+
+
+</body>
+</html>
